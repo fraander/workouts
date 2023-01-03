@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BD18BA622963C2440088F68F /* workoutsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD18BA612963C2440088F68F /* workoutsApp.swift */; };
+		BD18BA622963C2440088F68F /* WorkoutsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD18BA612963C2440088F68F /* WorkoutsApp.swift */; };
 		BD18BA642963C2440088F68F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD18BA632963C2440088F68F /* ContentView.swift */; };
 		BD18BA662963C2450088F68F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD18BA652963C2450088F68F /* Assets.xcassets */; };
 		BD18BA6A2963C2450088F68F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD18BA692963C2450088F68F /* Preview Assets.xcassets */; };
-		BD18BA742963C2450088F68F /* workoutsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD18BA732963C2450088F68F /* workoutsTests.swift */; };
+		BD18BA742963C2450088F68F /* WorkoutsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD18BA732963C2450088F68F /* WorkoutsTests.swift */; };
 		BD18BA8D2963C26D0088F68F /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD18BA8C2963C26D0088F68F /* Data.swift */; };
+		BD18BA8F2963C6910088F68F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD18BA8E2963C6910088F68F /* GoogleService-Info.plist */; };
+		BD18BA922963C7870088F68F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = BD18BA912963C7870088F68F /* FirebaseAnalytics */; };
+		BD18BA942963C7870088F68F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BD18BA932963C7870088F68F /* FirebaseAuth */; };
+		BD18BA962963C7870088F68F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = BD18BA952963C7870088F68F /* FirebaseFirestore */; };
+		BD18BA982963C7870088F68F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = BD18BA972963C7870088F68F /* FirebaseStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,26 +28,19 @@
 			remoteGlobalIDString = BD18BA5D2963C2440088F68F;
 			remoteInfo = workouts;
 		};
-		BD18BA7A2963C2460088F68F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BD18BA562963C2440088F68F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BD18BA5D2963C2440088F68F;
-			remoteInfo = workouts;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		BD18BA5E2963C2440088F68F /* workouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = workouts.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD18BA612963C2440088F68F /* workoutsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workoutsApp.swift; sourceTree = "<group>"; };
+		BD18BA612963C2440088F68F /* WorkoutsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsApp.swift; sourceTree = "<group>"; };
 		BD18BA632963C2440088F68F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BD18BA652963C2450088F68F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD18BA672963C2450088F68F /* workouts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = workouts.entitlements; sourceTree = "<group>"; };
 		BD18BA692963C2450088F68F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BD18BA6F2963C2450088F68F /* workoutsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = workoutsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD18BA732963C2450088F68F /* workoutsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workoutsTests.swift; sourceTree = "<group>"; };
-		BD18BA792963C2460088F68F /* workoutsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = workoutsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD18BA732963C2450088F68F /* WorkoutsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsTests.swift; sourceTree = "<group>"; };
 		BD18BA8C2963C26D0088F68F /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		BD18BA8E2963C6910088F68F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,17 +48,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD18BA922963C7870088F68F /* FirebaseAnalytics in Frameworks */,
+				BD18BA982963C7870088F68F /* FirebaseStorage in Frameworks */,
+				BD18BA942963C7870088F68F /* FirebaseAuth in Frameworks */,
+				BD18BA962963C7870088F68F /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BD18BA6C2963C2450088F68F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BD18BA762963C2460088F68F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -74,7 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				BD18BA602963C2440088F68F /* workouts */,
-				BD18BA722963C2450088F68F /* workoutsTests */,
+				BD18BA722963C2450088F68F /* WorkoutsTests */,
 				BD18BA5F2963C2440088F68F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -84,7 +79,6 @@
 			children = (
 				BD18BA5E2963C2440088F68F /* workouts.app */,
 				BD18BA6F2963C2450088F68F /* workoutsTests.xctest */,
-				BD18BA792963C2460088F68F /* workoutsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,11 +86,12 @@
 		BD18BA602963C2440088F68F /* workouts */ = {
 			isa = PBXGroup;
 			children = (
-				BD18BA612963C2440088F68F /* workoutsApp.swift */,
+				BD18BA612963C2440088F68F /* WorkoutsApp.swift */,
 				BD18BA632963C2440088F68F /* ContentView.swift */,
 				BD18BA8C2963C26D0088F68F /* Data.swift */,
 				BD18BA652963C2450088F68F /* Assets.xcassets */,
 				BD18BA672963C2450088F68F /* workouts.entitlements */,
+				BD18BA8E2963C6910088F68F /* GoogleService-Info.plist */,
 				BD18BA682963C2450088F68F /* Preview Content */,
 			);
 			path = workouts;
@@ -110,12 +105,12 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		BD18BA722963C2450088F68F /* workoutsTests */ = {
+		BD18BA722963C2450088F68F /* WorkoutsTests */ = {
 			isa = PBXGroup;
 			children = (
-				BD18BA732963C2450088F68F /* workoutsTests.swift */,
+				BD18BA732963C2450088F68F /* WorkoutsTests.swift */,
 			);
-			path = workoutsTests;
+			path = WorkoutsTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +129,12 @@
 			dependencies = (
 			);
 			name = workouts;
+			packageProductDependencies = (
+				BD18BA912963C7870088F68F /* FirebaseAnalytics */,
+				BD18BA932963C7870088F68F /* FirebaseAuth */,
+				BD18BA952963C7870088F68F /* FirebaseFirestore */,
+				BD18BA972963C7870088F68F /* FirebaseStorage */,
+			);
 			productName = workouts;
 			productReference = BD18BA5E2963C2440088F68F /* workouts.app */;
 			productType = "com.apple.product-type.application";
@@ -156,24 +157,6 @@
 			productReference = BD18BA6F2963C2450088F68F /* workoutsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BD18BA782963C2460088F68F /* workoutsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BD18BA892963C2460088F68F /* Build configuration list for PBXNativeTarget "workoutsUITests" */;
-			buildPhases = (
-				BD18BA752963C2460088F68F /* Sources */,
-				BD18BA762963C2460088F68F /* Frameworks */,
-				BD18BA772963C2460088F68F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BD18BA7B2963C2460088F68F /* PBXTargetDependency */,
-			);
-			name = workoutsUITests;
-			productName = workoutsUITests;
-			productReference = BD18BA792963C2460088F68F /* workoutsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -191,10 +174,6 @@
 						CreatedOnToolsVersion = 14.0;
 						TestTargetID = BD18BA5D2963C2440088F68F;
 					};
-					BD18BA782963C2460088F68F = {
-						CreatedOnToolsVersion = 14.0;
-						TestTargetID = BD18BA5D2963C2440088F68F;
-					};
 				};
 			};
 			buildConfigurationList = BD18BA592963C2440088F68F /* Build configuration list for PBXProject "workouts" */;
@@ -206,13 +185,15 @@
 				Base,
 			);
 			mainGroup = BD18BA552963C2440088F68F;
+			packageReferences = (
+				BD18BA902963C7870088F68F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = BD18BA5F2963C2440088F68F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				BD18BA5D2963C2440088F68F /* workouts */,
 				BD18BA6E2963C2450088F68F /* workoutsTests */,
-				BD18BA782963C2460088F68F /* workoutsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -224,17 +205,11 @@
 			files = (
 				BD18BA6A2963C2450088F68F /* Preview Assets.xcassets in Resources */,
 				BD18BA662963C2450088F68F /* Assets.xcassets in Resources */,
+				BD18BA8F2963C6910088F68F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BD18BA6D2963C2450088F68F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BD18BA772963C2460088F68F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -250,7 +225,7 @@
 			files = (
 				BD18BA642963C2440088F68F /* ContentView.swift in Sources */,
 				BD18BA8D2963C26D0088F68F /* Data.swift in Sources */,
-				BD18BA622963C2440088F68F /* workoutsApp.swift in Sources */,
+				BD18BA622963C2440088F68F /* WorkoutsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,14 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD18BA742963C2450088F68F /* workoutsTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BD18BA752963C2460088F68F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				BD18BA742963C2450088F68F /* WorkoutsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,11 +244,6 @@
 			isa = PBXTargetDependency;
 			target = BD18BA5D2963C2440088F68F /* workouts */;
 			targetProxy = BD18BA702963C2450088F68F /* PBXContainerItemProxy */;
-		};
-		BD18BA7B2963C2460088F68F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BD18BA5D2963C2440088F68F /* workouts */;
-			targetProxy = BD18BA7A2963C2460088F68F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -516,50 +479,6 @@
 			};
 			name = Release;
 		};
-		BD18BA8A2963C2460088F68F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6ZT823VK2T;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.frank.workoutsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = workouts;
-			};
-			name = Debug;
-		};
-		BD18BA8B2963C2460088F68F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6ZT823VK2T;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.frank.workoutsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = workouts;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -590,16 +509,41 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BD18BA892963C2460088F68F /* Build configuration list for PBXNativeTarget "workoutsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BD18BA8A2963C2460088F68F /* Debug */,
-				BD18BA8B2963C2460088F68F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BD18BA902963C7870088F68F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BD18BA912963C7870088F68F /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD18BA902963C7870088F68F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		BD18BA932963C7870088F68F /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD18BA902963C7870088F68F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		BD18BA952963C7870088F68F /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD18BA902963C7870088F68F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		BD18BA972963C7870088F68F /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD18BA902963C7870088F68F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BD18BA562963C2440088F68F /* Project object */;
 }
