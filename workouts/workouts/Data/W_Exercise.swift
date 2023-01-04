@@ -1,8 +1,8 @@
 //
-//  Data.swift
+//  W_Exercise.swift
 //  workouts
 //
-//  Created by Frank Anderson on 1/2/23.
+//  Created by Frank Anderson on 1/3/23.
 //
 
 import Foundation
@@ -14,13 +14,16 @@ import FirebaseFirestoreSwift
 struct W_Exercise: Codable, Identifiable, Equatable {
     
     @DocumentID var id: String?
-    var userId: String?
     private(set) var details: [String: String]
     
-    mutating func setUserId(_ id: String) {
-        self.userId = id
+    init() {
+        details = [:]
     }
     
+    /// Add or modify a detail
+    /// - Parameters:
+    ///   - key: the detail to update
+    ///   - value: the vaule to change it to
     mutating func addDetail(key: ExerciseDetailsKeys, value: String) {
         self.details[key.rawValue] = value
     }
@@ -35,16 +38,4 @@ enum ExerciseDetailsKeys: String {
     case sets = "sets"
     case reps = "reps"
     
-}
-
-/// Represents a trip to the gym.
-struct W_Routine: Codable, Identifiable, Equatable {
-    
-    @DocumentID var id: String?
-    var userId: String?
-    var exercises: [W_Exercise]
-    
-    mutating func setUserId(_ id: String) {
-        self.userId = id
-    }
 }

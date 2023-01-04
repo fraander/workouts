@@ -17,16 +17,21 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             Text("Hello, world! \(success)")
+            
+            Button {
+                var exercise = W_Exercise()
+                exercise.addDetail(key: ExerciseDetailsKeys.name, value: "e_name")
+                var routine = W_Routine()
+                routine.addExercise(exercise: exercise)
+                repo.add(routine)
+                print(repo.routines)
+                success = "true"
+            } label: {
+                Text("Create")
+            }
+
         }
         .padding()
-        .task {
-            var exercise = W_Exercise(userId: "e_userId", details: [:])
-            exercise.addDetail(key: ExerciseDetailsKeys.name, value: "e_name")
-            let exercises = [exercise]
-            let routine = W_Routine(userId: "r_userId", exercises: exercises)
-            repo.add(routine)
-            success = "true"
-        }
     }
 }
 

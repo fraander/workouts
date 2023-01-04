@@ -12,9 +12,10 @@
 		BD18BA662963C2450088F68F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD18BA652963C2450088F68F /* Assets.xcassets */; };
 		BD18BA6A2963C2450088F68F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD18BA692963C2450088F68F /* Preview Assets.xcassets */; };
 		BD18BA742963C2450088F68F /* WorkoutsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD18BA732963C2450088F68F /* WorkoutsTests.swift */; };
-		BD18BA8D2963C26D0088F68F /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD18BA8C2963C26D0088F68F /* Data.swift */; };
+		BD18BA8D2963C26D0088F68F /* W_Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD18BA8C2963C26D0088F68F /* W_Routine.swift */; };
 		BD18BA8F2963C6910088F68F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD18BA8E2963C6910088F68F /* GoogleService-Info.plist */; };
 		BD18BA9A2963C9790088F68F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD18BA992963C9790088F68F /* Model.swift */; };
+		BD51DE5B296561A4008B828F /* W_Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE797E7296560FF0087085C /* W_Exercise.swift */; };
 		BD59F6342965517600F9BB65 /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD59F6332965517600F9BB65 /* Repositories.swift */; };
 		BD59F636296551D900F9BB65 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD59F635296551D900F9BB65 /* AuthenticationService.swift */; };
 		BDE797DE29655EE90087085C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BDE797DD29655EE90087085C /* FirebaseAuth */; };
@@ -43,11 +44,12 @@
 		BD18BA692963C2450088F68F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BD18BA6F2963C2450088F68F /* workoutsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = workoutsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD18BA732963C2450088F68F /* WorkoutsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsTests.swift; sourceTree = "<group>"; };
-		BD18BA8C2963C26D0088F68F /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		BD18BA8C2963C26D0088F68F /* W_Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = W_Routine.swift; sourceTree = "<group>"; };
 		BD18BA8E2963C6910088F68F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BD18BA992963C9790088F68F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		BD59F6332965517600F9BB65 /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
 		BD59F635296551D900F9BB65 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		BDE797E7296560FF0087085C /* W_Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = W_Exercise.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +99,7 @@
 				BD18BA612963C2440088F68F /* WorkoutsApp.swift */,
 				BD18BA632963C2440088F68F /* ContentView.swift */,
 				BD18BA992963C9790088F68F /* Model.swift */,
-				BD18BA8C2963C26D0088F68F /* Data.swift */,
+				BDE797E9296561140087085C /* Data */,
 				BD59F6332965517600F9BB65 /* Repositories.swift */,
 				BD59F635296551D900F9BB65 /* AuthenticationService.swift */,
 				BD18BA652963C2450088F68F /* Assets.xcassets */,
@@ -122,6 +124,15 @@
 				BD18BA732963C2450088F68F /* WorkoutsTests.swift */,
 			);
 			path = WorkoutsTests;
+			sourceTree = "<group>";
+		};
+		BDE797E9296561140087085C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BD18BA8C2963C26D0088F68F /* W_Routine.swift */,
+				BDE797E7296560FF0087085C /* W_Exercise.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,10 +248,11 @@
 			files = (
 				BD18BA642963C2440088F68F /* ContentView.swift in Sources */,
 				BD59F6342965517600F9BB65 /* Repositories.swift in Sources */,
-				BD18BA8D2963C26D0088F68F /* Data.swift in Sources */,
+				BD18BA8D2963C26D0088F68F /* W_Routine.swift in Sources */,
 				BD59F636296551D900F9BB65 /* AuthenticationService.swift in Sources */,
 				BD18BA622963C2440088F68F /* WorkoutsApp.swift in Sources */,
 				BD18BA9A2963C9790088F68F /* Model.swift in Sources */,
+				BD51DE5B296561A4008B828F /* W_Exercise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
