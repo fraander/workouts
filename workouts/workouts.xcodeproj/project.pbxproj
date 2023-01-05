@@ -23,6 +23,8 @@
 		BD66F27229666267002EF70D /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD66F27129666267002EF70D /* Navigation.swift */; };
 		BD66F276296673C1002EF70D /* ExerciseListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD66F275296673C1002EF70D /* ExerciseListRowView.swift */; };
 		BD66F27829667400002EF70D /* AddRoutineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD66F27729667400002EF70D /* AddRoutineView.swift */; };
+		BD66F27A29676771002EF70D /* RoutineDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD66F27929676771002EF70D /* RoutineDetailView.swift */; };
+		BD66F27C296767B2002EF70D /* RoutineListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD66F27B296767B2002EF70D /* RoutineListRowView.swift */; };
 		BDE797DE29655EE90087085C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BDE797DD29655EE90087085C /* FirebaseAuth */; };
 		BDE797E029655EE90087085C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = BDE797DF29655EE90087085C /* FirebaseFirestore */; };
 		BDE797E229655EE90087085C /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = BDE797E129655EE90087085C /* FirebaseFirestoreCombine-Community */; };
@@ -59,6 +61,8 @@
 		BD66F27129666267002EF70D /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		BD66F275296673C1002EF70D /* ExerciseListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListRowView.swift; sourceTree = "<group>"; };
 		BD66F27729667400002EF70D /* AddRoutineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRoutineView.swift; sourceTree = "<group>"; };
+		BD66F27929676771002EF70D /* RoutineDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDetailView.swift; sourceTree = "<group>"; };
+		BD66F27B296767B2002EF70D /* RoutineListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineListRowView.swift; sourceTree = "<group>"; };
 		BDE797E7296560FF0087085C /* W_Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = W_Exercise.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,6 +150,8 @@
 		BD66F26B29665851002EF70D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BD66F27B296767B2002EF70D /* RoutineListRowView.swift */,
+				BD66F27929676771002EF70D /* RoutineDetailView.swift */,
 				BD66F275296673C1002EF70D /* ExerciseListRowView.swift */,
 				BD18BA612963C2440088F68F /* WorkoutsApp.swift */,
 				BD51DE5C2965D8FF008B828F /* RoutineListView.swift */,
@@ -294,9 +300,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD66F27A29676771002EF70D /* RoutineDetailView.swift in Sources */,
 				BD18BA642963C2440088F68F /* ContentView.swift in Sources */,
 				BD66F27029665B23002EF70D /* RoutineListViewModel.swift in Sources */,
 				BD59F6342965517600F9BB65 /* RoutineRepository.swift in Sources */,
+				BD66F27C296767B2002EF70D /* RoutineListRowView.swift in Sources */,
 				BD18BA8D2963C26D0088F68F /* W_Routine.swift in Sources */,
 				BD66F26D296658AE002EF70D /* RoutineListRowViewModel.swift in Sources */,
 				BD66F27829667400002EF70D /* AddRoutineView.swift in Sources */,

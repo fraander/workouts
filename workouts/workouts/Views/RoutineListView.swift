@@ -8,40 +8,49 @@
 import SwiftUI
 
 struct RoutineListView: View {
-    
-    @EnvironmentObject var nav: NavigationWrapper
+    @StateObject var nav = NavigationWrapper()
     @ObservedObject private var vm = RoutineRepository.shared
     
     var body: some View {
-        VStack {
-            List(vm.routines) { routine in
-                NavigationLink(value: routine) {
-                    VStack {
-                        Text(routine.id ?? "nil")
-                        Text(routine.userId ?? "nil")
-                        Text("\(routine.exercises.count)")
+        NavigationStack(path: $nav.path) {
+            VStack {
+                List(vm.routines) { routine in
+                    RoutineListRowView(routine: routine)
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button { nav.sheet = .settings } label: { Text("Settings") }
+                }
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button { nav.sheet = .addRoutine } label: { Text("Add Routine") }
+                }
+            }
+            .navigationDestination(for: W_Routine.self) { routine in
+                RoutineDetailView(routine: routine)
+                    .toolbar {
+                        Button {
+                            nav.sheet = .addExercise(routine)
+                        } label: {
+                            Text("Add Exercise")
+                        }
+                    }
+            }
+            .navigationDestination(for: W_Exercise.self) { exercise in
+                Text(exercise.details[ExerciseDetailKeys.name.rawValue] ?? "UNK")
+            }
+            .sheet(item: $nav.sheet) { sheetType in
+                Group {
+                    switch sheetType {
+                        case .addRoutine: AddRoutineView()
+                        case let .addExercise(routine): Text("add exercise; \(routine.name)")
+                        case .settings: Text("settings")
                     }
                 }
             }
+            .environmentObject(nav)
         }
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button {
-                    nav.sheet = .settings
-                } label: {
-                    Text("Settings")
-                }
-            }
-            
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button {
-                    nav.sheet = .addRoutine
-                } label: {
-                    Text("Add Routine")
-                }
-            }
-        }
-        
     }
 }
 
