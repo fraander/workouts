@@ -14,10 +14,12 @@
 		BD18BA742963C2450088F68F /* WorkoutsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD18BA732963C2450088F68F /* WorkoutsTests.swift */; };
 		BD18BA8D2963C26D0088F68F /* W_Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD18BA8C2963C26D0088F68F /* W_Routine.swift */; };
 		BD18BA8F2963C6910088F68F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD18BA8E2963C6910088F68F /* GoogleService-Info.plist */; };
-		BD18BA9A2963C9790088F68F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD18BA992963C9790088F68F /* Model.swift */; };
 		BD51DE5B296561A4008B828F /* W_Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE797E7296560FF0087085C /* W_Exercise.swift */; };
-		BD59F6342965517600F9BB65 /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD59F6332965517600F9BB65 /* Repositories.swift */; };
+		BD51DE5D2965D8FF008B828F /* RoutineListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD51DE5C2965D8FF008B828F /* RoutineListView.swift */; };
+		BD59F6342965517600F9BB65 /* RoutineRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD59F6332965517600F9BB65 /* RoutineRepository.swift */; };
 		BD59F636296551D900F9BB65 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD59F635296551D900F9BB65 /* AuthenticationService.swift */; };
+		BD66F26D296658AE002EF70D /* RoutineListRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD66F26C296658AE002EF70D /* RoutineListRowViewModel.swift */; };
+		BD66F27029665B23002EF70D /* RoutineListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD66F26F29665B23002EF70D /* RoutineListViewModel.swift */; };
 		BDE797DE29655EE90087085C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BDE797DD29655EE90087085C /* FirebaseAuth */; };
 		BDE797E029655EE90087085C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = BDE797DF29655EE90087085C /* FirebaseFirestore */; };
 		BDE797E229655EE90087085C /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = BDE797E129655EE90087085C /* FirebaseFirestoreCombine-Community */; };
@@ -46,9 +48,11 @@
 		BD18BA732963C2450088F68F /* WorkoutsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsTests.swift; sourceTree = "<group>"; };
 		BD18BA8C2963C26D0088F68F /* W_Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = W_Routine.swift; sourceTree = "<group>"; };
 		BD18BA8E2963C6910088F68F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		BD18BA992963C9790088F68F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		BD59F6332965517600F9BB65 /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
+		BD51DE5C2965D8FF008B828F /* RoutineListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineListView.swift; sourceTree = "<group>"; };
+		BD59F6332965517600F9BB65 /* RoutineRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineRepository.swift; sourceTree = "<group>"; };
 		BD59F635296551D900F9BB65 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		BD66F26C296658AE002EF70D /* RoutineListRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineListRowViewModel.swift; sourceTree = "<group>"; };
+		BD66F26F29665B23002EF70D /* RoutineListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineListViewModel.swift; sourceTree = "<group>"; };
 		BDE797E7296560FF0087085C /* W_Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = W_Exercise.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,12 +100,11 @@
 		BD18BA602963C2440088F68F /* workouts */ = {
 			isa = PBXGroup;
 			children = (
-				BD18BA612963C2440088F68F /* WorkoutsApp.swift */,
-				BD18BA632963C2440088F68F /* ContentView.swift */,
-				BD18BA992963C9790088F68F /* Model.swift */,
-				BDE797E9296561140087085C /* Data */,
-				BD59F6332965517600F9BB65 /* Repositories.swift */,
-				BD59F635296551D900F9BB65 /* AuthenticationService.swift */,
+				BD66F26E296658B2002EF70D /* View Models */,
+				BD66F26B29665851002EF70D /* Views */,
+				BDE797E9296561140087085C /* Promises */,
+				BD66F26A2966583D002EF70D /* Repositories */,
+				BDA91A242966580B00C878CF /* Services */,
 				BD18BA652963C2450088F68F /* Assets.xcassets */,
 				BD18BA672963C2450088F68F /* workouts.entitlements */,
 				BD18BA8E2963C6910088F68F /* GoogleService-Info.plist */,
@@ -126,13 +129,49 @@
 			path = WorkoutsTests;
 			sourceTree = "<group>";
 		};
-		BDE797E9296561140087085C /* Data */ = {
+		BD66F26A2966583D002EF70D /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				BD59F6332965517600F9BB65 /* RoutineRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		BD66F26B29665851002EF70D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD18BA612963C2440088F68F /* WorkoutsApp.swift */,
+				BD51DE5C2965D8FF008B828F /* RoutineListView.swift */,
+				BD18BA632963C2440088F68F /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BD66F26E296658B2002EF70D /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				BD66F26C296658AE002EF70D /* RoutineListRowViewModel.swift */,
+				BD66F26F29665B23002EF70D /* RoutineListViewModel.swift */,
+			);
+			name = "View Models";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		BDA91A242966580B00C878CF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BD59F635296551D900F9BB65 /* AuthenticationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BDE797E9296561140087085C /* Promises */ = {
 			isa = PBXGroup;
 			children = (
 				BD18BA8C2963C26D0088F68F /* W_Routine.swift */,
 				BDE797E7296560FF0087085C /* W_Exercise.swift */,
 			);
-			path = Data;
+			path = Promises;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,11 +286,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD18BA642963C2440088F68F /* ContentView.swift in Sources */,
-				BD59F6342965517600F9BB65 /* Repositories.swift in Sources */,
+				BD66F27029665B23002EF70D /* RoutineListViewModel.swift in Sources */,
+				BD59F6342965517600F9BB65 /* RoutineRepository.swift in Sources */,
 				BD18BA8D2963C26D0088F68F /* W_Routine.swift in Sources */,
+				BD66F26D296658AE002EF70D /* RoutineListRowViewModel.swift in Sources */,
 				BD59F636296551D900F9BB65 /* AuthenticationService.swift in Sources */,
 				BD18BA622963C2440088F68F /* WorkoutsApp.swift in Sources */,
-				BD18BA9A2963C9790088F68F /* Model.swift in Sources */,
+				BD51DE5D2965D8FF008B828F /* RoutineListView.swift in Sources */,
 				BD51DE5B296561A4008B828F /* W_Exercise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,7 +11,7 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 /// Represents an activity at the gym.
-struct W_Exercise: Codable, Identifiable, Equatable {
+struct W_Exercise: Codable, Identifiable, Equatable, Hashable {
     
     @DocumentID var id: String?
     private(set) var details: [String: String]
@@ -24,12 +24,12 @@ struct W_Exercise: Codable, Identifiable, Equatable {
     /// - Parameters:
     ///   - key: the detail to update
     ///   - value: the vaule to change it to
-    mutating func addDetail(key: ExerciseDetailsKeys, value: String) {
+    mutating func addDetail(key: ExerciseDetailKeys, value: String) {
         self.details[key.rawValue] = value
     }
 }
 
-enum ExerciseDetailsKeys: String {
+enum ExerciseDetailKeys: String {
     
     case name = "name"
     case details = "details"

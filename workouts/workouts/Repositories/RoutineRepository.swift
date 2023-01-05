@@ -58,6 +58,7 @@ class RoutineRepository: ObservableObject {
             var newRoutine = routine
             newRoutine.setUserId(userId)
             _ = try store.collection(routinePath).addDocument(from: newRoutine)
+            print("add from repo")
         } catch {
             fatalError("Unable to add: \(error.localizedDescription)")
         }
