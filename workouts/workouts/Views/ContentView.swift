@@ -17,7 +17,7 @@ struct ContentView: View {
                     Text("Name: " + routine.name)
                         .toolbar {
                             Button {
-                                nav.sheet = .addExercise
+                                nav.sheet = .addExercise(routine)
                             } label: {
                                 Text("Add Exercise")
                             }
@@ -30,8 +30,8 @@ struct ContentView: View {
                 .sheet(item: $nav.sheet) { sheetType in
                     Group {
                         switch sheetType {
-                            case .addRoutine: Text("add routine")
-                            case .addExercise: Text("add exercise")
+                            case .addRoutine: AddRoutineView()
+                            case let .addExercise(routine): Text("add exercise; \(routine.name)")
                             case .settings: Text("settings")
                         }
                     }

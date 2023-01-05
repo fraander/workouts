@@ -16,11 +16,27 @@ class NavigationWrapper: ObservableObject {
         path = NavigationPath()
     }
     
-    enum SheetType: String, Identifiable {
-        var id: Self { return self }
+    func dismissSheet() {
+        sheet = nil
+    }
+    
+    enum SheetType: Identifiable, CustomStringConvertible {
+        var id: String { return description }
         
         case addRoutine
-        case addExercise
+        case addExercise(W_Routine)
         case settings
+        
+        var description: String {
+            switch self {
+                    
+                case .addRoutine:
+                    return "addRoutine"
+                case let .addExercise(routine):
+                    return routine.id ?? "routine"
+                case .settings:
+                    return "settings"
+            }
+        }
     }
 }
