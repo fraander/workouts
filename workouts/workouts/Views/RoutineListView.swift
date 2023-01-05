@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct RoutineListView: View {
+    
+    @EnvironmentObject var nav: NavigationWrapper
     @ObservedObject private var vm = RoutineRepository.shared
     
     var body: some View {
@@ -23,12 +25,21 @@ struct RoutineListView: View {
             }
         }
         .toolbar {
-            Button {
-                vm.add(W_Routine())
-            } label: {
-                Text("Add Routine")
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    nav.sheet = .settings
+                } label: {
+                    Text("Settings")
+                }
             }
-
+            
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    nav.sheet = .addRoutine
+                } label: {
+                    Text("Add Routine")
+                }
+            }
         }
         
     }
