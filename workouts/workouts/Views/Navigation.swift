@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// TODO: find source of "Publishing changes from within view updates is not allowed, this will cause undefined behavior." warning message
+
 class NavigationWrapper: ObservableObject {
     @Published var path = NavigationPath()
     @Published var sheet: SheetType? = nil
