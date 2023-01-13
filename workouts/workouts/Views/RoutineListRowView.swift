@@ -8,14 +8,23 @@
 import SwiftUI
 
 struct RoutineListRowView: View {
-    let routine: W_Routine
+    @ObservedObject private var vm: RoutineListRowViewModel
+    
+    init(routine: W_Routine) {
+        self.vm = RoutineListRowViewModel(routine)
+    }
     
     var body: some View {
-        NavigationLink(value: routine) {
-            VStack {
-                Text(routine.id ?? "nil")
-                Text(routine.userId ?? "nil")
-                Text("\(routine.exercises.count)")
+        NavigationLink(value: vm.routine) {
+            VStack(alignment: .leading, spacing: 0) {
+                Text(vm.routine.name)
+                    .fontWidth(.expanded)
+                    .foregroundColor(.accentColor)
+                Text(vm.routine.details)
+                    .lineLimit(3)
+                    .minimumScaleFactor(0.8)
+                    .foregroundColor(.secondary)
+//                Text("\(vm.routine.exercises.count)")
             }
         }
     }
@@ -23,6 +32,20 @@ struct RoutineListRowView: View {
 
 struct RoutineListRowView_Previews: PreviewProvider {
     static var previews: some View {
-        RoutineListRowView(routine: W_Routine.exampleNormal)
+        NavigationStack {
+            List(0..<10) { num in
+                RoutineListRowView(routine: W_Routine.exampleNormal)
+                    .id(num)
+            }
+        }
     }
 }
+
+/*
+ 
+ static let exampleNormal = W_Routine(
+ name: "Daily Workout",
+ details: "This is a normal daily morning workout.",
+ exercises: W_Exercise.examples)
+ 
+ */
