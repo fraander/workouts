@@ -14,7 +14,7 @@ import FirebaseFirestoreSwift
 struct W_Routine: Codable, Identifiable, Equatable, Hashable {
     
     static let exampleShort = W_Routine(
-        name: "Daily",
+        name: "Morning",
         details: "",
         exercises: [])
     static let exampleNormal = W_Routine(

@@ -18,14 +18,21 @@ struct RoutineListRowView: View {
         NavigationLink(value: vm.routine) {
             VStack(alignment: .leading, spacing: 0) {
                 Text(vm.routine.name)
+                    .font(.headline)
                     .fontWidth(.expanded)
+                    .fontWeight(.bold)
                     .foregroundColor(.accentColor)
-                Text(vm.routine.details)
-                    .lineLimit(3)
-                    .minimumScaleFactor(0.8)
-                    .foregroundColor(.secondary)
-//                Text("\(vm.routine.exercises.count)")
+                if !vm.routine.details.isEmpty {
+                    Text(vm.routine.details)
+                        .font(.body)
+                        .fontDesign(.rounded)
+                        .fontWeight(.regular)
+                        .lineLimit(3)
+                        .minimumScaleFactor(0.8)
+                        .foregroundColor(.secondary)
+                }
             }
+            .badge(vm.routine.exercises.count > 0 ? vm.routine.exercises.count : 0)
         }
     }
 }
@@ -33,9 +40,13 @@ struct RoutineListRowView: View {
 struct RoutineListRowView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            List(0..<10) { num in
+            List(0..<10) { (num: Int) in
+                RoutineListRowView(routine: W_Routine.exampleLong)
+                RoutineListRowView(routine: W_Routine.exampleShort)
                 RoutineListRowView(routine: W_Routine.exampleNormal)
-                    .id(num)
+            }
+            .navigationDestination(for: W_Routine.self) { routine in
+                Text(routine.name)
             }
         }
     }
